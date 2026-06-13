@@ -86,6 +86,17 @@ INSERT INTO Bookings (booking_id, user_id, match_id, seat_number, payment_status
 (505, 3, 102, 'C-20', 'Pending', 120.00);
 
 
+-- Query 1:
+select
+  *
+from
+  matches
+where
+  tournament_category = 'Champions League'
+  and match_status = 'Available';
+
+
+
 
 
 
