@@ -96,7 +96,14 @@ where
   and match_status = 'Available';
 
 
-
+-- Query 2: 
+select
+  *
+from
+  users
+where
+  full_name ilike 'Tanvir%'
+  or full_name ilike '%Haque%';
 
 
 
