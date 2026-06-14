@@ -137,7 +137,35 @@ from
   left join Bookings as b on u.user_id = b.user_id
   order by u.user_id;
 
+-- Query 6:
+select
+  booking_id,
+  match_id,
+  total_cost
+from
+  Bookings
+where
+  total_cost > (
+    select
+      avg(total_cost)
+    from
+      bookings
+  );
 
+
+-- Query 7:
+select
+  match_id,
+  fixture,
+  base_ticket_price
+from
+  Matches
+order by
+  base_ticket_price desc
+offset
+  1
+limit
+  2;
 
 
 
